@@ -1,17 +1,30 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
+import connector from '../store/connector.js';
+
+const { func } = PropTypes;
 
 class Test extends Component {
   constructor(props) {
     super(props);
-    console.log(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
+  componentDidMount() {
+    this.props.initialAction();
+  }
+  handleClick(e) {
+    console.log(this.props);
   }
   render() {
     return (
       <div>
-        <h1>Testing this out</h1>
+        <h1 onClick={this.handleClick}>Testing this out</h1>
       </div>
     );
   }
 }
 
-export default Test;
+Test.propTypes = {
+  initialAction: func
+};
+
+export default connector(Test);
