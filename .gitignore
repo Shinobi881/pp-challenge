@@ -1,0 +1,18 @@
+node_modules
+npm-debug.log
+.DS_Store
+.env
+coverage/
+.nyc_output
+
+# Unhide for deployment
+dist/*.js.map
+dist/*.json
+dist/*.hot-update.js
+dist/*.ttf
+dist/*.woff
+dist/*.eot
+dist/*.woff2
+dist/*.svg
+
+
