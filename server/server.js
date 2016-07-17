@@ -24,7 +24,7 @@ app.use('/api/data', (req, res, next) => {
 });
 
 app.get('*', (req, res) => {
-  res.redirect('/');
+  res.send(publicPath);
 });
 
 app.listen(port, () => {
