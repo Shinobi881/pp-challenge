@@ -1,9 +1,13 @@
+# THe basics
 node_modules
 npm-debug.log
 .DS_Store
 .env
 coverage/
 .nyc_output
+
+# Dist
+
 
 # Unhide for deployment
 dist/*.js.map
@@ -14,5 +18,6 @@ dist/*.woff
 dist/*.eot
 dist/*.woff2
 dist/*.svg
+dist/bundle.js
 
 

@@ -102,6 +102,8 @@
     "babel-register": "^6.7.2",
     "body-parser": "^1.15.0",
     "bootstrap": "^3.3.6",
+    "cldr-core": "^29.0.0",
+    "cldr-misc-full": "^29.0.0",
     "css-loader": "^0.23.1",
     "expose": "^0.1.4",
     "express": "^4.13.4",

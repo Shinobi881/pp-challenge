@@ -7,7 +7,7 @@ const axios = require('axios');
 
 const app = express();
 const publicPath = '../dist';
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3030;
 const env = process.env.NODE_ENV || 'development';
 
 app.use(express.static('dist/'));
@@ -22,6 +22,10 @@ if (env === 'development') {
 app.use('/api/data', (req, res, next) => {
   res.send('hello again');
 });
+
+// app.get('/json', (req, res) => {
+//   axios.get('../node_modules/')
+// })
 
 app.get('*', (req, res) => {
   res.send(publicPath);
