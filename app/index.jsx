@@ -1,5 +1,6 @@
 import './stylesheets/main.scss';
 import React, { Component } from 'react';
+import axios from 'axios';
 import Test from './components/test.jsx';
 import connector from './store/connector';
 import DashBoard from './views/dashBoard';
@@ -8,6 +9,12 @@ import DashBoard from './views/dashBoard';
 class App extends Component {
   constructor(props) {
     super(props);
+  }
+  componentWillMount() {
+    axios.get('/json')
+      .then(res => {
+        console.log('Delims: ', res);
+      });
   }
   render () {
     return (
