@@ -4,6 +4,8 @@ import { Provider } from 'react-redux';
 import store from './store/store.js';
 import App from './index';
 
+store.dispatch({type: 'INITIAL_STATE'});
+
 render(
   <Provider store={store}>
     <App />

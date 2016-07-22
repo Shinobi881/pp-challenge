@@ -1,1 +1,2 @@
 export const INITIAL_STATE = 'INITIAL_STATE';
+export const SEARCH_LOCALES = 'SEARCH_LOCALES';
